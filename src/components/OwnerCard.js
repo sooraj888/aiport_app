@@ -21,14 +21,14 @@ export default function OwnerCard() {
               overflow: "hidden",
             }}
           >
-            <Image
+            {/* <Image
               alt="Mountains"
               src={
                 "https://www.adani.com/-/media/EDEB0E192FB0482A87B6D53B412E8BF0.ashx"
               }
               width={300}
               height={100}
-            />
+            /> */}
           </div>
           <div style={{ margin: 20 }}>
             Mangaluru International Airport Bajpe Main Rd, Kenjar HC, Karnataka
