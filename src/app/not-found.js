@@ -1,5 +1,11 @@
-import React from "react";
+"use client";
 
+import { useRouter } from "next/navigation";
 export default function Notfound() {
-  return <div>ella</div>;
+  const router = useRouter();
+  return (
+    <button type="button" onClick={() => router.push("/")}>
+      Dashboard
+    </button>
+  );
 }

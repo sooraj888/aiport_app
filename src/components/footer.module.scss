@@ -1,0 +1,40 @@
+.linkTitle {
+  color: rgb(28, 27, 27);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-weight: 400;
+  /* margin-bottom: 100px; */
+  /* text-decoration: none; */
+}
+
+.linkGray {
+  color: rgb(123, 123, 123);
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+// .linkGray:visited {
+//   color: rgb(0, 21, 255);
+// }
+
+.linkGray:active {
+  color: rgb(0, 208, 142);
+}
+.titleHeader {
+  margin-bottom: 10px;
+  background: red;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}

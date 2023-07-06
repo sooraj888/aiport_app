@@ -1,0 +1,27 @@
+@import "mixsins";
+
+.hide_button {
+  display: none;
+  height: 50px;
+
+  width: 100%;
+  color: red;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0px;
+}
+
+.hide_site_map_card {
+  display: none;
+}
+
+@include mobile() {
+  .hide_button {
+    background: rgb(4, 248, 216);
+    display: flex;
+  }
+  .hide_site_map_card {
+    display: block;
+  }
+}
