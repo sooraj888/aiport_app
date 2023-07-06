@@ -1,8 +1,6 @@
 import Link from "next/link";
 import footerStyle from "./footer.module.scss";
 export default function NavigationCard() {
-  //
-
   return (
     <div className="container ">
       <div className="row" style={{ textAlign: "left", color: "black" }}>
