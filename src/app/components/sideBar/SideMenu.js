@@ -95,8 +95,7 @@ export default function SideMenu({ children }) {
 
       <div className={`${styles.headerPadding}`}>{children}</div>
       <Footer />
-      <div className={`${styles.footerPadding}`}></div>
-      <div className={`${styles.footerBottom}`}>
+      <div className={`${styles.footerBottom}`} style={{ zIndex: 100 }}>
         <div>
           <MdSupport style={{ marginBottom: 5 }}></MdSupport>
           <Link

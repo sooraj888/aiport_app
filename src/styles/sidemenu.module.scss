@@ -1,8 +1,23 @@
 @import "mixsins";
 
 .footerBottom {
-  display: none;
-  position: fixed;
+  // display: none;
+  // position: fixed;
+  // z-index: 6;
+
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 55px;
+  background: rgb(7, 159, 149);
+  left: 0;
+  bottom: 0;
+  z-index: 8;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .headerPadding {
   padding-top: 100px;
@@ -20,7 +35,7 @@
 }
 
 .header {
-  padding: 0% 10% 0% 2%;
+  padding: 0% 6% 0% 2%;
   width: 100%;
   height: 100px;
   background-color: white;
@@ -129,5 +144,11 @@
 @include mobile() {
   .sidenav {
     width: 100%;
+  }
+}
+
+@include mobile_screen() {
+  .footerBottom {
+    display: none;
   }
 }
