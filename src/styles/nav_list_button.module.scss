@@ -5,7 +5,7 @@
   height: 50px;
 
   width: 100%;
-  color: red;
+  color: white;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -14,14 +14,22 @@
 
 .hide_site_map_card {
   display: none;
+  display: flex;
+  justify-content: center;
 }
 
 @include mobile() {
   .hide_button {
-    background: rgb(4, 248, 216);
+    background: rgb(23, 159, 149);
     display: flex;
   }
   .hide_site_map_card {
     display: block;
+  }
+}
+
+@include mobile_screen() {
+  .hide_site_map_card {
+    display: none;
   }
 }

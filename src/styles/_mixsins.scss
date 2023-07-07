@@ -21,3 +21,21 @@
     @content;
   }
 }
+
+@mixin xxsm {
+  @media (max-width: 300px) {
+    @content;
+  }
+}
+
+@mixin mobile_scren {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin mobile_screen {
+  @media (min-width: 993px) {
+    @content;
+  }
+}

@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 export default function page() {
-  return <div>sustainability </div>;
+  return <div className={`page`}>sustainability</div>;
 }

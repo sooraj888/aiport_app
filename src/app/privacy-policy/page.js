@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 export default function page() {
-  return <div>privacy-policy </div>;
+  return <div className={`page`}>privacy-policy </div>;
 }

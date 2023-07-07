@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 export default function page() {
-  return <div> passenger-guide</div>;
+  return <div className={`page`}>passenger-guide</div>;
 }

@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 export default function page() {
-  return <div>disclaimer </div>;
+  return <div className={`page`}>disclaimer</div>;
 }

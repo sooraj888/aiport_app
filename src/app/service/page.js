@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 export default function page() {
-  return <div>service</div>;
+  return <div className={`page`}>service</div>;
 }

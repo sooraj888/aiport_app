@@ -54,10 +54,13 @@
     // > div:nth-child(2) {
     // }
   }
-
-  .footer_bottom > div:nth-child(1) {
-    min-height: 60px;
-  }
+  // .footer_bottom > div:nth-child(1) {
+  //   min-height: 40px;
+  //   background-color: red;
+  // }
+  // .footer_bottom > div:nth-child(2) {
+  //   min-height: 60px;
+  // }
   .footer_bottom > div:nth-child(1) > div:nth-child(1) {
     padding: 0px;
     display: flex;
@@ -79,7 +82,7 @@
 @include md() {
   .footer_bottom > div:nth-child(1) > div:nth-child(2) {
     font-size: 0.6rem;
-    padding: 0px;
+    padding: 0.4rem 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +91,7 @@
 
 @include xsm() {
   .footer_bottom > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
-    padding: 0;
+    padding: 5px 0px;
     margin: 0;
     div {
       display: flex;
@@ -97,5 +100,11 @@
       align-items: center;
       justify-content: center;
     }
+  }
+}
+
+@include xxsm {
+  .footer_bottom > div:nth-child(2) {
+    min-height: 300px;
   }
 }

@@ -1,3 +1,4 @@
+import "@/styles/global.css";
 export default function page() {
-  return <div>airline-partnership </div>;
+  return <div className={`page`}>airline-partnership</div>;
 }

@@ -1,8 +1,21 @@
 import Image from "next/image";
+import "../styles/global.css";
 
 export default function page() {
   return (
-    <div className="bg-warning">
+    <div className="bg-warning page">
+      <div> home page 1</div>
+      <div> home page</div>
+      <div> home page</div>
+      {/* <div> home page</div>
+      <div> home page</div>
+      <div> home page</div> home page<div> home page</div>
+      <div> home page</div>
+      <div> home page</div>
+      <div> home page</div>
+      <div> home page</div>
+      <div> home page</div>
+      <div> home page</div> <div> home page</div>
       <div> home page</div>
       <div> home page</div>
       <div> home page</div>
@@ -20,19 +33,7 @@ export default function page() {
       <div> home page</div>
       <div> home page</div>
       <div> home page</div>
-      <div> home page</div> home page<div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div> <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div> home page{" "}
+      <div> home page</div> home page{" "} */}
       {/* <div className="container-sm" style={{ width: "50%", height: "50%" }}>
         <Image
           src={
