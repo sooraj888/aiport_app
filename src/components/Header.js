@@ -22,6 +22,8 @@ export default function Header({ children }) {
           // alert("hii");
           router.push("/");
         }}
+        // style={{ textDecoration: "none", color: "black" }}
+        // href="/"
       >
         <div className={`${styles.headerTitle}`}>
           <div>

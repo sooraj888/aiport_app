@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 import "bootstrap/dist/css/bootstrap.css";
 
-import SideMenu from "./components/sideBar/SideMenu";
+import SideMenu from "../components/sideBar/SideMenu";
 
 export const metadata = {
   title: "Create Next App",

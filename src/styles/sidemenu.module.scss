@@ -60,12 +60,12 @@
 
 .sidenav {
   height: 100%;
-  width: 300px;
+  min-width: 400px;
   position: fixed;
   z-index: 5;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: rgb(21, 131, 124);
   overflow-y: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -100,10 +100,11 @@
   // pointer-events: ;
   cursor: pointer;
 }
+
 @include mobile_scren() {
   .sidenav {
     width: 100%;
-
+    margin-top: 50px;
     // height: 0;
   }
   .headerMenu {
@@ -126,6 +127,7 @@
     color: white;
     padding-left: 10%;
     padding-right: 10%;
+    position: fixed;
   }
 
   .footerPadding {
