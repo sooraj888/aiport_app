@@ -19,6 +19,11 @@
   padding-left: 10%;
   padding-right: 10%;
 }
+.hideSidenav {
+  width: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
 .headerPadding {
   padding-top: 100px;
 }
@@ -112,6 +117,13 @@
     padding-left: 35px;
     // height: 0;
   }
+
+  .hideSidenav {
+    width: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
   .headerMenu {
     display: none;
   }
@@ -151,6 +163,11 @@
 @include mobile() {
   .sidenav {
     width: 100%;
+  }
+  .hideSidenav {
+    width: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 }
 

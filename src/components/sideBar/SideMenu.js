@@ -53,7 +53,9 @@ export default function SideMenu({ children }) {
       <div
         id="mySidenav"
         ref={sideMenueRef}
-        className={`${isSideMenuOpen ? styles.sidenav : styles.sidenav_hide} `}
+        className={`${styles.sidenav} ${
+          !isSideMenuOpen ? styles.hideSidenav : "khsja"
+        }`}
       >
         <div
           className={`${styles.closebtn}`}
