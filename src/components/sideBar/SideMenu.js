@@ -20,6 +20,7 @@ export default function SideMenu({ children }) {
   const sideMenueRef = useRef();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
   useEffect(() => {
     closeSideMenue();
     const url = `${pathname}?${searchParams}`;
