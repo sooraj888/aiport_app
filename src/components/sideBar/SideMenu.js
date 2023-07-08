@@ -3,34 +3,68 @@
 import styles from "@/styles/sidemenu.module.scss";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { createRef, useEffect, useRef, useState } from "react";
 import Footer from "../Footer";
 import { AiOutlineMenu } from "react-icons/ai";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { HiChatAlt2 } from "react-icons/hi";
 import { MdSupport } from "react-icons/md";
-import Header from "../Header";
+import Header, { headerRef } from "../Header";
 
 import SideMenuOptions from "./SideMenuOptions";
 
 import { usePathname, useSearchParams } from "next/navigation";
-
+export const headerMainRef = createRef();
 export default function SideMenu({ children }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
   const sideMenueRef = useRef();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  const headerMiddleRef = useRef();
+
   useEffect(() => {
-    closeSideMenue();
-    const url = `${pathname}?${searchParams}`;
-    console.log(url);
-    // You can now use the current URL
-    // ...
-  }, [pathname, searchParams]);
+    // headerMainRef.current.style.backgroundColor = "white";
+  }, []);
+
+  // useEffect(() => {
+  //   closeSideMenue();
+  //   const url = `${pathname}?${searchParams}`;
+  //   console.log(url);
+  //   // You can now use the current URL
+  //   // ...
+  // }, [pathname, searchParams]);
 
   const closeSideMenue = () => {
     setIsSideMenuOpen(false);
   };
+
+  //start
+  useEffect(() => {
+    const handleScroll = () => {
+      // setScrollY(window.scrollY);
+      console.log(window.outerWidth);
+      if (window.scrollY < 100) {
+        headerRef.current.style.backgroundColor = "transparent";
+      } else {
+        headerRef.current.style.backgroundColor = "white";
+      }
+    };
+
+    // just trigger this so that the initial state
+    // is updated as soon as the component is mounted
+    // related: https://stackoverflow.com/a/63408216
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  //end
 
   return (
     <div>
@@ -67,26 +101,43 @@ export default function SideMenu({ children }) {
         </div>
         <SideMenuOptions closeSideMenue={closeSideMenue} />
       </div>
-
-      <Header closeSideMenue={closeSideMenue}>
+      <div
+        ref={headerMainRef}
+        className={
+          isSideMenuOpen
+            ? styles.headerBackground
+            : styles.headerBackgroundTransparent
+        }
+      >
         <div
-          className={`${styles.headerMenu}`}
-          onClick={() => {
-            setIsSideMenuOpen(true);
-          }}
+          ref={headerMiddleRef}
+          className={
+            isSideMenuOpen
+              ? styles.headerBackground
+              : styles.headerBackgroundTransparent
+          }
         >
-          <AiOutlineMenu
-            onClick={() => {
-              setIsSideMenuOpen((prev) => !prev);
-            }}
-            scale={20}
-            size={36}
-            color="black"
-          />
+          <Header closeSideMenue={closeSideMenue}>
+            <div
+              className={`${styles.headerMenu}`}
+              onClick={() => {
+                setIsSideMenuOpen(true);
+              }}
+            >
+              <AiOutlineMenu
+                onClick={() => {
+                  setIsSideMenuOpen(true);
+                  // headerRef.current.style.backgroundColor = "white";
+                }}
+                scale={20}
+                size={36}
+                color="black"
+              />
+            </div>
+          </Header>
         </div>
-      </Header>
-
-      <div className={`${styles.headerPadding}`}>{children}</div>
+      </div>
+      <div className={``}>{children}</div>
       <Footer />
       <div className={`${styles.footerPadding}`}></div>
       <div className={`${styles.footerBottom}`} style={{ zIndex: 100 }}>

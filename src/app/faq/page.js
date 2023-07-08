@@ -1,4 +1,4 @@
-import "@/styles/global.css";
+import "@/styles/global.module.scss";
 export default function page() {
   return <div className={`page`}>faq</div>;
 }

@@ -1,0 +1,17 @@
+@import "mixsins";
+
+.page {
+  min-height: 40rem;
+  background: rgb(244, 239, 236);
+}
+
+.pageWithPadding {
+  background: rgb(244, 239, 236);
+  min-height: 25rem;
+  margin-top: 100px;
+}
+@include mobile_scren() {
+  .pageWithPadding {
+    margin-top: 50px;
+  }
+}

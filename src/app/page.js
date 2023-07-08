@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "../styles/global.css";
+import "../styles/global.module.scss";
 
 export default function page() {
   return (

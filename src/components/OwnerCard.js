@@ -20,7 +20,6 @@ export default function OwnerCard() {
           <div
             className={"d-flex justify-content-center row "}
             style={{
-              position: "relative",
               display: "block",
               overflow: "hidden",
               maxWidth: 400,
