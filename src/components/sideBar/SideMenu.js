@@ -30,7 +30,7 @@ export default function SideMenu({ children }) {
   // useEffect(() => {
   //   closeSideMenue();
   //   const url = `${pathname}?${searchParams}`;
-  //   console.log(url);
+
   //   // You can now use the current URL
   //   // ...
   // }, [pathname, searchParams]);
@@ -43,7 +43,7 @@ export default function SideMenu({ children }) {
   useEffect(() => {
     const handleScroll = () => {
       // setScrollY(window.scrollY);
-      console.log(window.outerWidth);
+
       if (window.scrollY < 100) {
         headerRef.current.style.backgroundColor = "transparent";
       } else {
