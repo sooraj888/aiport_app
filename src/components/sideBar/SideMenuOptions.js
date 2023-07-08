@@ -45,9 +45,10 @@ export default function SideMenuOptions({ closeSideMenue }) {
   return (
     <div>
       <div className="col " style={{ cursor: "pointer" }}>
-        {navList.map((item) => {
+        {navList.map((item, key1) => {
           return (
             <div
+              key={key1}
               style={{
                 paddingBottom: 5,
                 paddingTop: 10,
@@ -70,9 +71,9 @@ export default function SideMenuOptions({ closeSideMenue }) {
 
               {selectedOption == item.name && (
                 <div>
-                  {item.links.map((option) => {
+                  {item.links.map((option, key2) => {
                     return (
-                      <div>
+                      <div key={key2}>
                         {
                           <Link
                             href={option.path}
