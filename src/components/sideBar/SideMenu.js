@@ -20,7 +20,6 @@ export default function SideMenu({ children }) {
   const sideMenueRef = useRef();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-
   useEffect(() => {
     closeSideMenue();
     const url = `${pathname}?${searchParams}`;
@@ -54,7 +53,7 @@ export default function SideMenu({ children }) {
       <div
         id="mySidenav"
         ref={sideMenueRef}
-        className={`${isSideMenuOpen ? styles.sidenav : styles.sidenav_hide}`}
+        className={`${isSideMenuOpen ? styles.sidenav : styles.sidenav_hide} `}
       >
         <div
           className={`${styles.closebtn}`}
@@ -64,10 +63,10 @@ export default function SideMenu({ children }) {
         >
           &times;
         </div>
-        <SideMenuOptions />
+        <SideMenuOptions closeSideMenue={closeSideMenue} />
       </div>
 
-      <Header>
+      <Header closeSideMenue={closeSideMenue}>
         <div
           className={`${styles.headerMenu}`}
           onClick={() => {
@@ -91,13 +90,25 @@ export default function SideMenu({ children }) {
       <div className={`${styles.footerBottom}`} style={{ zIndex: 100 }}>
         <div>
           <MdSupport style={{ marginBottom: 5 }}></MdSupport>
-          <Link href={"/"} className={`${styles.link}`}>
+          <Link
+            href={"/"}
+            className={`${styles.link}`}
+            onClick={() => {
+              closeSideMenue();
+            }}
+          >
             Service
           </Link>
         </div>
         <div>
           <HiChatAlt2 style={{ marginBottom: 5 }}></HiChatAlt2>{" "}
-          <Link href={"/corporate/contact-us"} className={`${styles.link}`}>
+          <Link
+            href={"/corporate/contact-us"}
+            onClick={() => {
+              closeSideMenue();
+            }}
+            className={`${styles.link}`}
+          >
             Feedback
           </Link>
         </div>

@@ -5,7 +5,7 @@ import styles from "@/styles/sidemenu.module.scss";
 
 import React from "react";
 import { useRouter } from "next/navigation";
-export default function Header({ children }) {
+export default function Header({ children, closeSideMenue }) {
   // const
   const router = useRouter();
   return (
@@ -20,6 +20,7 @@ export default function Header({ children }) {
         className="col bg-white d-flex justify-content-start align-items-center "
         onClick={() => {
           // alert("hii");
+          closeSideMenue();
           router.push("/");
         }}
         // style={{ textDecoration: "none", color: "black" }}
