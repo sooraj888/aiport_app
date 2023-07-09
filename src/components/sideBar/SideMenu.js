@@ -15,6 +15,8 @@ import SideMenuOptions from "./SideMenuOptions";
 
 import { usePathname, useSearchParams } from "next/navigation";
 export const headerMainRef = createRef();
+export let isSolidHeaderRef = createRef(false);
+isSolidHeaderRef.current = false;
 export default function SideMenu({ children }) {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
   const sideMenueRef = useRef();
@@ -27,13 +29,18 @@ export default function SideMenu({ children }) {
     // headerMainRef.current.style.backgroundColor = "white";
   }, []);
 
-  // useEffect(() => {
-  //   closeSideMenue();
-  //   const url = `${pathname}?${searchParams}`;
-
-  //   // You can now use the current URL
-  //   // ...
-  // }, [pathname, searchParams]);
+  useEffect(() => {
+    // closeSideMenue();
+    const url = `${pathname}?${searchParams}`;
+    // alert(pathname);
+    if (pathname == "/") {
+      headerRef.current.style.backgroundColor = "transparent";
+      headerRef.current.style.color = "white";
+      headerRef.current.style.boxShadow = "0px 0px 0px #F4AAB9";
+    }
+    // You can now use the current URL
+    // ...
+  }, [pathname, searchParams]);
 
   const closeSideMenue = () => {
     setIsSideMenuOpen(false);
@@ -41,20 +48,31 @@ export default function SideMenu({ children }) {
 
   //start
   useEffect(() => {
+    headerRef.current.style.color = "white";
+    headerRef.current.style.boxShadow = "0px 0px 0px #F4AAB9";
     const handleScroll = () => {
       // setScrollY(window.scrollY);
 
-      if (window.scrollY < 100) {
+      if (
+        window.scrollY < 100 &&
+        isSolidHeaderRef.current == false &&
+        !isSideMenuOpen
+      ) {
         headerRef.current.style.backgroundColor = "transparent";
+        headerRef.current.style.color = "white";
+        headerRef.current.style.boxShadow = "0px 0px 0px #F4AAB9";
       } else {
         headerRef.current.style.backgroundColor = "white";
+        headerRef.current.style.color = "black";
+        headerRef.current.style.boxShadow =
+          "0px 1px 5px 0px rgba(0, 0, 0, 0.4)";
       }
     };
 
     // just trigger this so that the initial state
     // is updated as soon as the component is mounted
     // related: https://stackoverflow.com/a/63408216
-    handleScroll();
+    // handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -62,8 +80,21 @@ export default function SideMenu({ children }) {
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isSideMenuOpen]);
 
+  useEffect(() => {
+    if (!isSideMenuOpen) {
+      // alert(window.scrollY);
+      if (window.scrollY < 100 && isSolidHeaderRef.current == false) {
+        headerRef.current.style.color = "white";
+        headerRef.current.style.backgroundColor = "transparent";
+      } else {
+        headerRef.current.style.color = "black";
+      }
+    } else {
+      headerRef.current.style.color = "black";
+    }
+  }, [isSideMenuOpen]);
   //end
 
   return (
@@ -81,7 +112,7 @@ export default function SideMenu({ children }) {
           right: 0,
           bottom: 0,
           top: 0,
-          // zIndex: 1,
+          zIndex: 2,
         }}
       ></div>
       <div
@@ -108,6 +139,7 @@ export default function SideMenu({ children }) {
             ? styles.headerBackground
             : styles.headerBackgroundTransparent
         }
+        style={{ zIndex: 4 }}
       >
         <div
           ref={headerMiddleRef}
@@ -137,9 +169,11 @@ export default function SideMenu({ children }) {
           </Header>
         </div>
       </div>
-      <div className={``}>{children}</div>
+      <div className={``} style={{ zIndex: 1 }}>
+        {children}
+      </div>
       <Footer />
-      <div className={`${styles.footerPadding}`}></div>
+      <div className={`${styles.footerPadding}`} style={{ zIndex: 4 }}></div>
       <div className={`${styles.footerBottom}`} style={{ zIndex: 100 }}>
         <div>
           <MdSupport style={{ marginBottom: 5 }}></MdSupport>

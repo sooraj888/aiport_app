@@ -1,48 +1,27 @@
 import Image from "next/image";
 import "../styles/global.module.scss";
-
+import imageStyle from "@/styles/image.module.scss";
 export default function page() {
+  const mountains =
+    "https://www.adani.com/-/media/Project/MangaloreAirport/Traveller/Home/NewBanners/Mangaluru--Envisaging-a-touch-less-travel-min.webp";
   return (
-    <div className="bg-warning page">
-      <div> home page 1</div>
-      <div> home page</div>
-      <div> home page</div>
-      {/* <div> home page</div>
-      <div> home page</div>
-      <div> home page</div> home page<div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div> <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div> home page<div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div> <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div>
-      <div> home page</div> home page{" "} */}
-      {/* <div className="container-sm" style={{ width: "50%", height: "50%" }}>
+    <div className="bg-white page">
+      <div style={{ height: "700px", position: "relative" }}>
         <Image
-          src={
-            "https://www.adani.com/-/media/Project/AhmedabadAirport/Home/pranaam-banner-1920-1080.webp"
-          }
-          alt="ijj"
-          fill={true}
+          alt="Mountains"
+          src={mountains}
+          fill
+          sizes="(min-width: 808px) 50vw, 100vw"
+          style={{
+            // zIndex: -1,
+            objectFit: "cover", // cover, contain, none
+          }}
         />
-      </div> */}
+      </div>
+      <div>agjdsghagsdj</div>
+      <div>agjdsghagsdj</div> <div>agjdsghagsdj</div> <div>agjdsghagsdj</div>{" "}
+      <div>agjdsghagsdj</div> <div>agjdsghagsdj</div> <div>agjdsghagsdj</div>{" "}
+      <div>agjdsghagsdj</div> <div>agjdsghagsdj</div>
     </div>
   );
 }
