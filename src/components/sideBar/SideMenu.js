@@ -163,7 +163,7 @@ export default function SideMenu({ children }) {
                 }}
                 scale={20}
                 size={36}
-                color="black"
+                // color="black"
               />
             </div>
           </Header>

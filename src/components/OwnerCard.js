@@ -32,6 +32,7 @@ export default function OwnerCard() {
               }
               width={160}
               height={100}
+              style={{ width: "auto", height: "auto" }}
             />
 
             <div style={{ margin: 20 }}>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import NavigationCard from "../NavigationCard";
 import { BiSolidChevronDown } from "react-icons/bi";
 export default function SideMenuOptions({ closeSideMenue }) {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState("travellers");
   const navList = [
     {
       title: "Travellers",

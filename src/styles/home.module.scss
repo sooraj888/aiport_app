@@ -1,0 +1,28 @@
+@import "mixsins";
+.imageHeader {
+  height: 100vh;
+}
+.screen {
+  margin-left: 6ch;
+  margin-right: 6ch;
+  // margin: 100;
+  // background: green;
+}
+.image {
+  height: 80vh;
+}
+
+@include mobile_scren() {
+  .screen {
+    margin: 0px;
+  }
+  .image {
+    min-height: 200px;
+    height: 30vh;
+  }
+  .imageHeader {
+    min-height: 350px;
+    height: 65vh;
+    max-height: 450px;
+  }
+}
