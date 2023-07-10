@@ -24,28 +24,26 @@ export default function page() {
     text: "The global COVID-19 pandemic has had a significant impact on the way we live our lives, including how we travel by air.",
     button: "Know More",
   };
+  const mountains2 =
+    "https://www.adani.com/-/media/Project/MangaloreAirport/Home/Gateway-to-goodness-min.webp";
   return (
     <div className=" page " style={{ overflow: "hidden" }}>
       <div
-        className={`${styles.imageHeader}`}
         style={{
-          // height: "100vh",
-          // width: "100vw",
-          // marginBottom: "14ch",
-          marginBottom: 100,
-          position: "relative",
+          marginBottom: "14ch",
         }}
       >
-        <Image
-          alt="Mountains"
-          src={mountains}
-          fill
-          quality={100}
-          sizes="(min-width: 808px) 50vw, 100vw"
-          style={{
-            objectFit: "cover",
-          }}
-        />
+        <picture>
+          <source media="(min-width:650px)" srcSet={mountains} />
+          <source quality={100} media="(max-width:465px)" srcSet={mountains2} />
+          <img
+            src={mountains}
+            quality={100}
+            alt="Flowers"
+            className="img-fluid"
+            style={{ width: "auto" }}
+          />
+        </picture>
       </div>
 
       <div
