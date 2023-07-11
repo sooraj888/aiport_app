@@ -3,10 +3,8 @@ import Image from "next/image";
 import imageStyle from "@/styles/image.module.scss";
 import TextImageCard from "@/components/Cards/TextImageCard";
 import styles from "@/styles/home.module.scss";
+import MyCarousel from "@/components/MyCarousel";
 export default function page() {
-  const mountains =
-    "https://www.adani.com/-/media/Project/MangaloreAirport/Traveller/Home/NewBanners/Mangaluru--Gateway-to-Goodness-min.jpg";
-
   const Image2 =
     "https://www.adani.com/-/media/Project/MangaloreAirport/Home/Mangalorean/Web/Banner-home-page.jpg?la=en&hash=4E66543B9F9E7D0F7B351563E31B3528";
   const cardData = {
@@ -24,27 +22,9 @@ export default function page() {
     text: "The global COVID-19 pandemic has had a significant impact on the way we live our lives, including how we travel by air.",
     button: "Know More",
   };
-  const mountains2 =
-    "https://www.adani.com/-/media/Project/MangaloreAirport/Home/Gateway-to-goodness-min.webp";
   return (
     <div className=" page " style={{ overflow: "hidden" }}>
-      <div
-        style={{
-          marginBottom: "14ch",
-        }}
-      >
-        <picture>
-          <source media="(min-width:650px)" srcSet={mountains} />
-          <source quality={100} media="(max-width:465px)" srcSet={mountains2} />
-          <img
-            src={mountains}
-            quality={100}
-            alt="Flowers"
-            className="img-fluid"
-            style={{ width: "auto" }}
-          />
-        </picture>
-      </div>
+      <MyCarousel />
 
       <div
         className={`${styles.image}`}

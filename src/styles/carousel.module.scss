@@ -1,0 +1,24 @@
+@import "mixsins";
+
+.carouselImageView {
+  max-height: 100vh;
+  display: block;
+}
+@include mobile_700px() {
+  .carouselImageView {
+    min-height: 200px;
+    // max-height: 650px;
+    height: 150vw;
+    width: "100%";
+
+    // min-height: 100vh !important;
+  }
+}
+
+@include mobile_700pxAndHeight() {
+  .carouselImageView {
+    max-height: fit-content;
+    // display: none;
+    // max-height: 100vh;
+  }
+}
