@@ -40,12 +40,13 @@ export default function MyCarousel() {
       dynamicHeight={true}
       // style={{ maxHeight: "100vh" }}
     >
-      {images.map((imageItem) => {
+      {images.map((imageItem, key) => {
         return (
           <div
             style={{
               marginBottom: "14ch",
             }}
+            key={key}
             className={styles.carouselImageView}
           >
             <picture>
