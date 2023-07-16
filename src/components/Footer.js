@@ -16,7 +16,7 @@ export default function Footer() {
             height: 300,
             marginLeft: 10,
             marginRight: 10,
-            backgroundColor: "red",
+
             overflow: "hidden",
           }}
         >

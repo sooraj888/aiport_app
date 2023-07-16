@@ -87,7 +87,6 @@ export default function page() {
             position: "relative",
             marginBottom: "5ch",
             marginTop: "0ch",
-            // backgroundColor: "red",
           }}
         >
           <Image

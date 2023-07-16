@@ -83,7 +83,6 @@ export default function OwnerCard() {
                     key={key}
                     className="btn"
                     style={{
-                      // background: "red",
                       margin: "10px 4px",
                       padding: 0,
                       borderRadius: 0,
