@@ -3,6 +3,23 @@
 .carouselImageView {
   max-height: 100vh;
   display: block;
+  animation-name: identifier;
+  // size: 200pt;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  overflow: hidden;
+}
+
+@keyframes identifier {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @include mobile_700px() {
   .carouselImageView {

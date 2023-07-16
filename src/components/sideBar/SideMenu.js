@@ -37,6 +37,7 @@ export default function SideMenu({ children }) {
       headerRef.current.style.backgroundColor = "transparent";
       headerRef.current.style.color = "white";
       headerRef.current.style.boxShadow = "0px 0px 0px #F4AAB9";
+      headerRef.current.style.textShadow = "1px 2px 5px rgba(0,0,0,0.8)";
     }
     // You can now use the current URL
     // ...
@@ -50,6 +51,7 @@ export default function SideMenu({ children }) {
   useEffect(() => {
     headerRef.current.style.color = "white";
     headerRef.current.style.boxShadow = "0px 0px 0px #F4AAB9";
+    headerRef.current.style.textShadow = "1px 2px 5px rgba(0,0,0,0.8)";
     const handleScroll = () => {
       // setScrollY(window.scrollY);
 
@@ -60,10 +62,12 @@ export default function SideMenu({ children }) {
       ) {
         headerRef.current.style.backgroundColor = "transparent";
         headerRef.current.style.color = "white";
+        headerRef.current.style.textShadow = "1px 2px 5px rgba(0,0,0,0.8)";
         headerRef.current.style.boxShadow = "0px 0px 0px #F4AAB9";
       } else {
         headerRef.current.style.backgroundColor = "white";
         headerRef.current.style.color = "black";
+        headerRef.current.style.textShadow = "0px 0px 0px rgba(0,0,0,0)";
         headerRef.current.style.boxShadow =
           "0px 1px 5px 0px rgba(0, 0, 0, 0.4)";
       }
@@ -88,11 +92,15 @@ export default function SideMenu({ children }) {
       if (window.scrollY < 100 && isSolidHeaderRef.current == false) {
         headerRef.current.style.color = "white";
         headerRef.current.style.backgroundColor = "transparent";
+
+        headerRef.current.style.textShadow = "1px 2px 5px rgba(0,0,0,0.8)";
       } else {
         headerRef.current.style.color = "black";
+        headerRef.current.style.textShadow = "0px 0px 0px rgba(0,0,0,0)";
       }
     } else {
       headerRef.current.style.color = "black";
+      headerRef.current.style.textShadow = "0px 0px 0px rgba(0,0,0,0)";
     }
   }, [isSideMenuOpen]);
   //end

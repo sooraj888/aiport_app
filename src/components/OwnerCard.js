@@ -4,9 +4,31 @@ import Image from "next/image";
 import styles from "@/styles/nav_list_button.module.scss";
 import NavigationCard from "./NavigationCard";
 import { useState } from "react";
+import LOGO from "../../public/assets/logo.png";
 
 export default function OwnerCard() {
   const [isSitemapOpen, setIsSitemapOpen] = useState(false);
+  const socialMediaLinks = [
+    {
+      imageSrc:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png",
+      url: "",
+    },
+    {
+      imageSrc: "https://cdn-icons-png.flaticon.com/128/2111/2111463.png",
+      url: "",
+    },
+    {
+      imageSrc:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png",
+      url: "",
+    },
+    {
+      imageSrc:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png?20220821125553",
+      url: "",
+    },
+  ];
   return (
     <div
       className={`text-center container-fluid p-0`}
@@ -25,19 +47,63 @@ export default function OwnerCard() {
               maxWidth: 400,
             }}
           >
-            <Image
-              alt="Mountains"
-              src={
-                "https://www.adani.com/-/media/EDEB0E192FB0482A87B6D53B412E8BF0.ashx"
-              }
-              width={160}
-              height={100}
-              style={{ width: "auto", height: "auto" }}
-            />
+            <div
+              style={{
+                marginRight: 15,
+                marginTop: 2.5,
+
+                width: 100,
+                height: 100,
+              }}
+            >
+              <img
+                quality={100}
+                alt="logo"
+                src={LOGO.src}
+                style={{ objectFit: "cover", width: "100px", borderRadius: 50 }}
+                className={"img-fluid"}
+              />
+            </div>
 
             <div style={{ margin: 20 }}>
-              Mangaluru International Airport Bajpe Main Rd, Kenjar HC,
-              Karnataka 574142
+              Shivamogga Domestic Airport
+              <br />
+              VJ54+45J, Shivamogga, Karnataka 577302
+            </div>
+            <div
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                display: "flex",
+              }}
+            >
+              {socialMediaLinks.map((item, key) => {
+                return (
+                  <button
+                    key={key}
+                    className="btn"
+                    style={{
+                      // background: "red",
+                      margin: "10px 4px",
+                      padding: 0,
+                      borderRadius: 0,
+                      justifyContent: "center",
+                      alignItems: "center",
+                      display: "flex",
+                    }}
+                  >
+                    <img
+                      src={item.imageSrc}
+                      className="img-fluid"
+                      style={{
+                        width: 25,
+                        height: 25,
+                        objectFit: "cover",
+                      }}
+                    ></img>
+                  </button>
+                );
+              })}
             </div>
           </div>
           <button

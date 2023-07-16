@@ -8,6 +8,35 @@ import OwnerCard from "./OwnerCard";
 export default function Footer() {
   return (
     <div className="container-fluid text-light p-0 m-0">
+      <div className="d-flex justify-content-center align-items-center br-dark">
+        <div
+          style={{
+            width: 400,
+            marginTop: 10,
+            height: 300,
+            marginLeft: 10,
+            marginRight: 10,
+            backgroundColor: "red",
+            overflow: "hidden",
+          }}
+        >
+          <div className={footerStyle.mapouter}>
+            <div className={footerStyle.gmap_canvas}>
+              <iframe
+                className={footerStyle.gmap_iframe}
+                width="100%"
+                // frameBorder="0"
+                // scrolling="no"
+                // marginHeight="0"
+                // marginWidth="0"
+                src="https://maps.google.com/maps?width=300&amp;height=300&amp;hl=en&amp;q=shimoga airport&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
+              <a href="https://connectionsgame.org/">Connections NYT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className={`container-fluid p-0 m-0 ${styles.footer_nav}`}>
         <div className={`row  p-0 m-0`}>
           <div
@@ -24,7 +53,7 @@ export default function Footer() {
       {/* footer bottom completed */}
       <div className={`${styles.footer_bottom}`}>
         <div className="row p-0 m-0">
-          <div className={`col-lg-6`}>© 2020 Adani Group</div>
+          <div className={`col-lg-6`}>© 2023 Government of Karnataka</div>
           <div className={`col`}>
             <div className={`row`}>
               <div className={`col`}>

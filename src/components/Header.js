@@ -5,6 +5,9 @@ import styles from "@/styles/sidemenu.module.scss";
 
 import React, { createRef } from "react";
 import { useRouter } from "next/navigation";
+import LOGO from "../../public/assets/logo.png";
+import { AiOutlineSearch } from "react-icons/ai";
+import { TiWeatherCloudy } from "react-icons/ti";
 
 export const headerRef = createRef();
 
@@ -13,25 +16,42 @@ export default function Header({ children, closeSideMenue }) {
   const router = useRouter();
   return (
     <div className={`${styles.header} container-flued row m-0`} ref={headerRef}>
-      {/* <div className="col d-flex justify-content-center align-item-center bg-dark">
-        <Link href="/" className="col">
-          <h1>Dashboard</h1>
-        </Link>
-        <div className="col">{children}</div>
-      </div> */}
       <div
         className="col  d-flex justify-content-start align-items-center "
         onClick={() => {
-          // alert("hii");
           closeSideMenue();
           router.push("/");
         }}
-        // style={{ textDecoration: "none", color: "black" }}
-        // href="/"
+        // style={{ display: "flex", flexDirection: "row" }}
       >
-        <div className={`${styles.headerTitle}`}>
+        <div
+          style={{
+            marginRight: 15,
+            marginTop: 2.5,
+
+            width: 45,
+            height: 45,
+          }}
+        >
+          <img
+            quality={100}
+            alt="logo"
+            src={LOGO.src}
+            style={{ objectFit: "cover", width: "100px", borderRadius: 50 }}
+            className={"img-fluid"}
+          />
+        </div>
+
+        <div
+          className={`${styles.headerTitle}`}
+          style={{
+            paddingLeft: 15,
+            borderLeftWidth: 2,
+            borderLeftStyle: "solid",
+          }}
+        >
           <div>
-            <b>Shivamoga</b>
+            <b>Shivamogga</b>
           </div>
           <div>
             <nobr>Domestic Airport</nobr>
@@ -39,6 +59,16 @@ export default function Header({ children, closeSideMenue }) {
         </div>
       </div>
       <div className="col d-flex justify-content-end align-items-center">
+        <div
+          style={{
+            marginRight: "10%",
+          }}
+        >
+          <AiOutlineSearch size={30} onClick={() => {}}></AiOutlineSearch>
+        </div>
+        <div style={{ marginRight: "10%" }}>
+          <TiWeatherCloudy size={30} onClick={() => {}}></TiWeatherCloudy>
+        </div>
         {children}
       </div>
     </div>

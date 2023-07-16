@@ -13,9 +13,9 @@ export default function MyCarousel() {
   const images = [
     {
       landscapeImage:
-        "https://www.adani.com/-/media/Project/MangaloreAirport/Traveller/Home/NewBanners/Mangaluru--Gateway-to-Goodness-min.jpg",
+        "https://c4.wallpaperflare.com/wallpaper/105/484/965/towards-the-sunset-white-airplane-wallpaper-preview.jpg",
       portraitImage:
-        "https://www.adani.com/-/media/Project/MangaloreAirport/Home/Gateway-to-goodness-min.webp",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ43J2C7DiSwS8lXqvLNQxRpmlfkbG_3aOrplrjUWJLbXyeqkgxenCnyJApkYfHpy1GihY&usqp=CAU",
     },
     {
       landscapeImage:
@@ -36,21 +36,26 @@ export default function MyCarousel() {
       autoPlay={true}
       emulateTouch={true}
       infiniteLoop={true}
-      interval={3000}
+      interval={8000}
       dynamicHeight={true}
-      // style={{ maxHeight: "100vh" }}
+      showArrows={false}
+      showStatus={false}
+      showThumbs={false}
+      // className={styles.carouselImageView}
     >
       {images.map((imageItem, key) => {
         return (
           <div
             style={{
               marginBottom: "14ch",
+              overflow: "hidden",
             }}
             key={key}
-            className={styles.carouselImageView}
+            // className={styles.carouselImageView}
           >
             <picture>
               <source
+                quality={100}
                 media="(min-width:765px)"
                 srcSet={imageItem.landscapeImage}
               />
@@ -58,13 +63,13 @@ export default function MyCarousel() {
                 quality={100}
                 media="(max-width:765px)"
                 srcSet={imageItem.portraitImage}
-                style={{ maxHeight: "10vh", height: "10px" }}
+                // style={{ maxHeight: "100vh", height: "10px" }}
               />
               <img
                 quality={100}
                 alt="Flowers"
                 className={`img-fluid ${styles.carouselImageView}`}
-                style={{ objectFit: "cover", width: "100%" }}
+                // style={{ objectFit: "cover", width: "100%" }}
               />
             </picture>
           </div>

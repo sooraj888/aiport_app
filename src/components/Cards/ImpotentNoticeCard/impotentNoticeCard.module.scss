@@ -1,0 +1,27 @@
+@import "../../../styles/mixsins";
+
+.screenIN {
+  background: rgb(255, 250, 242);
+  margin: 10ch 6ch;
+  min-height: 30ch;
+  border: 1px solid black;
+}
+.heading {
+  background: blue;
+  color: white;
+  padding: 5px 20px;
+  //   justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.card {
+  padding: 20px 20px;
+}
+@include mobile_scren() {
+  .screenIN {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
