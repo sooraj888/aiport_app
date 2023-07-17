@@ -36,7 +36,7 @@ export default function MyCarousel() {
       autoPlay={true}
       emulateTouch={true}
       infiniteLoop={true}
-      interval={8000}
+      interval={6000}
       dynamicHeight={true}
       showArrows={false}
       showStatus={false}

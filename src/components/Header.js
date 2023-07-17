@@ -6,6 +6,7 @@ import styles from "@/styles/sidemenu.module.scss";
 import React, { createRef } from "react";
 import { useRouter } from "next/navigation";
 import LOGO from "../../public/assets/logo.png";
+import LOGO2 from "../../public/assets/logo2.jpg";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TiWeatherCloudy } from "react-icons/ti";
 
@@ -61,6 +62,24 @@ export default function Header({ children, closeSideMenue }) {
       <div className="col d-flex justify-content-end align-items-center">
         <div
           style={{
+            // marginRight: 15,
+            marginTop: 2.5,
+
+            width: 90,
+            height: 45,
+            overflow: "hidden",
+          }}
+        >
+          <img
+            quality={100}
+            alt="logo"
+            src={LOGO2.src}
+            style={{ objectFit: "cover", width: "100px", borderRadius: 0 }}
+            className={"img-fluid"}
+          />
+        </div>
+        {/* <div
+          style={{
             marginRight: "10%",
           }}
         >
@@ -69,7 +88,7 @@ export default function Header({ children, closeSideMenue }) {
         <div style={{ marginRight: "10%" }}>
           <TiWeatherCloudy size={30} onClick={() => {}}></TiWeatherCloudy>
         </div>
-        {children}
+        {children} */}
       </div>
     </div>
   );

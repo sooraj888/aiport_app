@@ -107,7 +107,7 @@ export default function SideMenu({ children }) {
 
   return (
     <div>
-      <div
+      {/* <div
         onClick={() => {
           closeSideMenue();
         }}
@@ -122,8 +122,8 @@ export default function SideMenu({ children }) {
           top: 0,
           zIndex: 2,
         }}
-      ></div>
-      <div
+      ></div> */}
+      {/* <div
         id="mySidenav"
         ref={sideMenueRef}
         className={`${styles.sidenav} ${
@@ -139,7 +139,7 @@ export default function SideMenu({ children }) {
           &times;
         </div>
         <SideMenuOptions closeSideMenue={closeSideMenue} />
-      </div>
+      </div> */}
       <div
         ref={headerMainRef}
         className={
@@ -158,7 +158,7 @@ export default function SideMenu({ children }) {
           }
         >
           <Header closeSideMenue={closeSideMenue}>
-            <div
+            {/* <div
               className={`${styles.headerMenu}`}
               onClick={() => {
                 setIsSideMenuOpen(true);
@@ -173,16 +173,16 @@ export default function SideMenu({ children }) {
                 size={36}
                 // color="black"
               />
-            </div>
+            </div> */}
           </Header>
         </div>
       </div>
-      <div className={``} style={{ zIndex: 1 }}>
-        {children}
-      </div>
+      <div style={{ zIndex: 1 }}>{children}</div>
+
       <Footer />
-      <div className={`${styles.footerPadding}`} style={{ zIndex: 4 }}></div>
-      <div className={`${styles.footerBottom}`} style={{ zIndex: 100 }}>
+      {/* <div className={`${styles.footerPadding}`} style={{ zIndex: 4 }}></div> */}
+      {/* removed bottom menu */}
+      {/* <div className={`${styles.footerBottom}`} style={{ zIndex: 100 }}>
         <div>
           <MdSupport style={{ marginBottom: 5 }}></MdSupport>
           <Link
@@ -227,7 +227,7 @@ export default function SideMenu({ children }) {
             />
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

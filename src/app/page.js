@@ -30,7 +30,7 @@ export default function page() {
     >
       <MyCarousel />
 
-      <div
+      {/* <div
         className={`${styles.image}`}
         style={{
           position: "relative",
@@ -47,9 +47,9 @@ export default function page() {
             objectFit: "cover",
           }}
         />
-      </div>
+      </div> */}
       {/*  */}
-      <div
+      {/* <div
         className={`${styles.screen} row`}
         style={{
           marginBottom: "10ch",
@@ -77,9 +77,9 @@ export default function page() {
         >
           <TextImageCard cardData={cardData2} />
         </div>
-      </div>
+      </div> */}
 
-      <div style={{}}>
+      {/* <div style={{}}>
         <div
           className={`${styles.screen} ${styles.image}`}
           style={{
@@ -102,7 +102,7 @@ export default function page() {
             }}
           />
         </div>
-      </div>
+      </div> */}
 
       <div>
         <ImpotentNoticeCard />

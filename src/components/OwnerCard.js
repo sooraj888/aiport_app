@@ -3,8 +3,10 @@
 import Image from "next/image";
 import styles from "@/styles/nav_list_button.module.scss";
 import NavigationCard from "./NavigationCard";
+import footerStyle from "./footer.module.scss";
 import { useState } from "react";
 import LOGO from "../../public/assets/logo.png";
+import Link from "next/link";
 
 export default function OwnerCard() {
   const [isSitemapOpen, setIsSitemapOpen] = useState(false);
@@ -68,7 +70,7 @@ export default function OwnerCard() {
             <div style={{ margin: 20 }}>
               Shivamogga Domestic Airport
               <br />
-              VJ54+45J, Shivamogga, Karnataka 577302
+              Shivamogga, Karnataka 577302
             </div>
             <div
               style={{
@@ -105,17 +107,38 @@ export default function OwnerCard() {
               })}
             </div>
           </div>
-          <button
+          <div
+            style={{
+              color: "gray",
+              height: "35px",
+              paddingTop: "30px",
+              paddingBottom: "50px",
+              display: "flex",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+            }}
+          >
+            <Link className={footerStyle.linkGray} href={"/corporate/about-us"}>
+              About Us
+            </Link>
+            <Link
+              className={footerStyle.linkGray}
+              href={"/corporate/contact-us"}
+            >
+              Contact Us
+            </Link>
+          </div>
+          {/* <button
             className={`${styles.hide_button}`}
             onClick={() => {
               setIsSitemapOpen((prev) => !prev);
             }}
           >
             sitemap
-          </button>
-          <div className={`${styles.hide_site_map_card}  p-0 `}>
+          </button> */}
+          {/* <div className={`${styles.hide_site_map_card}  p-0 `}>
             {isSitemapOpen && <NavigationCard />}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

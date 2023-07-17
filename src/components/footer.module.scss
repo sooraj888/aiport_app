@@ -1,3 +1,4 @@
+@import "../styles/mixsins";
 .linkTitle {
   color: rgb(28, 27, 27);
   font-size: 1.4rem;
@@ -15,6 +16,7 @@
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
+
 // .linkGray:visited {
 //   color: rgb(0, 21, 255);
 // }
@@ -41,7 +43,9 @@
     margin-top: 10px;
   }
 }
-
+.showMap {
+  display: none;
+}
 //google map
 .mapouter {
   position: relative;
@@ -57,4 +61,10 @@
 }
 .gmap_iframe {
   height: 300px !important;
+}
+
+@include mobile_scren() {
+  .showMap {
+    display: block;
+  }
 }
