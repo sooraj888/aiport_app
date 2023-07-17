@@ -27,7 +27,9 @@ export default function GallerySlider() {
           }}
           href={"/gallery"}
         >
-          <h3>{"Go To Gallery ->"}</h3>
+          <h3>
+            {"Gallery    "} <span style={{ paddingLeft: 10 }}> &#9992;</span>
+          </h3>
         </Link>
       </div>
       <img

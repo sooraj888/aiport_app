@@ -2,8 +2,6 @@
 import React from "react";
 import styles from "./featuresCard.module.scss";
 
-// import "react-multi-carousel/lib/styles.css";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useRouter } from "next/navigation";
@@ -56,7 +54,11 @@ export default function FeaturesCards() {
   const router = useRouter();
   return (
     <div className={`${styles.screen}`}>
-      <Carousel responsive={responsive}>
+      <Carousel
+        responsive={responsive}
+        style={{ zIndex: "1 !important" }}
+        containerClass={`${styles.carouselZIndex}`}
+      >
         {arr.map((item, key) => {
           return (
             <div

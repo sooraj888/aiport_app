@@ -17,6 +17,9 @@
   background-size: cover;
   border: "1px solid rgba(0,0,0,0.3)";
 }
+.carouselZIndex {
+  z-index: 1 !important;
+}
 
 @include mobile_scren() {
   .screen {
