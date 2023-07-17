@@ -6,7 +6,12 @@ import styles from "./featuresCard.module.scss";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useRouter } from "next/navigation";
+import FOODIMAGE from "../../../public/assets/food.jpg";
+import SERVICE_IMAGE from "../../../public/assets/service.jpg";
+import FLIGHT_TOWER from "../../../public/assets/flights.jpg";
 
+import GUIDE from "../../../public/assets/guide.jpg";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -27,35 +32,44 @@ const responsive = {
 
 const arr = [
   {
-    title: "Dine",
-    imageSrc:
-      "https://www.adani.com/-/media/Project/MangaloreAirport/Home/Dine.jpg?h=416&la=en&w=290&hash=52B8F56C519482CF80511500B08AF69F.png",
+    href: "flight-status",
+    title: "Flights",
+    imageSrc: FLIGHT_TOWER.src,
   },
   {
-    title: "Airport Service",
-    imageSrc:
-      "https://www.adani.com/-/media/Project/MangaloreAirport/Home/Airport-Services.jpg?h=416&la=en&w=290&hash=9A672A6E10465E0AA902BBB529A45AF5.png",
+    title: "Dine Out",
+    imageSrc: FOODIMAGE.src,
   },
   {
-    title: "Passenger Guid",
-    imageSrc:
-      "https://www.adani.com/-/media/Project/MangaloreAirport/Home/departure.jpg?h=416&la=en&w=290&hash=1B3A6A48F48C1A9D6DB83A34DD331746.png",
+    title: "Airport Services",
+    imageSrc: SERVICE_IMAGE.src,
+  },
+  {
+    title: "Passenger Guide",
+    imageSrc: GUIDE.src,
   },
 ];
 
 const newArr = new Array(5).fill(arr?.[0]);
 
 export default function FeaturesCards() {
+  const router = useRouter();
   return (
     <div className={`${styles.screen}`}>
       <Carousel responsive={responsive}>
         {arr.map((item, key) => {
           return (
             <div
+              onClick={() => {
+                if (item.href) {
+                  router.push(item.href);
+                }
+              }}
               className={`${styles.carouselCard} img-fluid`}
               style={{
                 backgroundImage: `url(${item.imageSrc})`,
                 display: "flex",
+                cursor: item?.href ? "pointer" : "default",
               }}
               key={key}
             >
@@ -73,7 +87,9 @@ export default function FeaturesCards() {
                 }}
               >
                 <div style={{ width: 20, height: 100 }}></div>
-                <h4>{item.title}</h4>
+                <h4 style={{ textShadow: "5px 5px 5px black" }}>
+                  {item.title}
+                </h4>
               </div>
             </div>
           );
