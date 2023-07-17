@@ -1,0 +1,21 @@
+@import "../../styles//mixsins";
+
+.gallery {
+  margin: 5ch 10ch;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.bottomButton {
+  bottom: 50px;
+}
+
+@include mobile_scren() {
+  .gallery {
+    margin: 5ch 0px;
+  }
+  .bottomButton {
+    bottom: 5px;
+  }
+}

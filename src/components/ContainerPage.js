@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { headerMainRef } from "./sideBar/SideMenu";
 import { headerRef } from "./Header";
 import { isSolidHeaderRef } from "./sideBar/SideMenu";
-export default function ContainerPage() {
+export default function ContainerPage({ children }) {
   useEffect(() => {
     headerMainRef.current.style.backgroundColor = "white";
     headerRef.current.style.color = "black";
@@ -18,5 +18,5 @@ export default function ContainerPage() {
       headerRef.current.style.textShadow = "1px 2px 5px rgba(0,0,0,0.8)";
     };
   }, []);
-  return <div>airline partnership</div>;
+  return <div>{children}</div>;
 }

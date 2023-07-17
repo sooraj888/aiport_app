@@ -10,8 +10,15 @@
   min-height: 25rem;
   margin-top: 100px;
 }
+
+.galleyImgMargin {
+  margin: 25px;
+}
 @include mobile_scren() {
   .pageWithPadding {
     margin-top: 50px;
+  }
+  .galleyImgMargin {
+    margin: 10px;
   }
 }

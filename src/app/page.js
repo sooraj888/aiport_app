@@ -5,6 +5,8 @@ import TextImageCard from "@/components/Cards/TextImageCard";
 import styles from "@/styles/home.module.scss";
 import MyCarousel from "@/components/MyCarousel";
 import ImpotentNoticeCard from "@/components/Cards/ImpotentNoticeCard/ImpotentNoticeCard";
+import GallerySlider from "@/components/GallrySlider/GallerySlider";
+
 export default function page() {
   const Image2 =
     "https://www.adani.com/-/media/Project/MangaloreAirport/Home/Mangalorean/Web/Banner-home-page.jpg?la=en&hash=4E66543B9F9E7D0F7B351563E31B3528";
@@ -26,7 +28,11 @@ export default function page() {
   return (
     <div
       className=" page "
-      style={{ overflow: "hidden", backgroundColor: "rgb(244,239,236)" }}
+      style={{
+        overflow: "hidden",
+        backgroundColor: "rgb(244,239,236)",
+        // color: "black",
+      }}
     >
       <MyCarousel />
 
@@ -103,9 +109,11 @@ export default function page() {
           />
         </div>
       </div> */}
-
       <div>
         <ImpotentNoticeCard />
+      </div>
+      <div>
+        <GallerySlider />
       </div>
     </div>
   );
