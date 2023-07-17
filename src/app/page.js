@@ -6,6 +6,7 @@ import styles from "@/styles/home.module.scss";
 import MyCarousel from "@/components/MyCarousel";
 import ImpotentNoticeCard from "@/components/Cards/ImpotentNoticeCard/ImpotentNoticeCard";
 import GallerySlider from "@/components/GallrySlider/GallerySlider";
+import FeaturesCards from "@/components/FeaturesCards/FeaturesCards";
 
 export default function page() {
   const Image2 =
@@ -25,6 +26,7 @@ export default function page() {
     text: "The global COVID-19 pandemic has had a significant impact on the way we live our lives, including how we travel by air.",
     button: "Know More",
   };
+
   return (
     <div
       className=" page "
@@ -114,6 +116,10 @@ export default function page() {
       </div>
       <div>
         <GallerySlider />
+      </div>
+
+      <div>
+        <FeaturesCards />
       </div>
     </div>
   );

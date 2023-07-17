@@ -91,26 +91,26 @@ export default function Footer() {
             <div className={`row`}>
               <div className={`col`}>
                 <nobr>
-                  <Link className={footerStyle.link} href={"/privacy-policy"}>
-                    Privacy Policy
-                  </Link>
+                  {/* <Link className={footerStyle.link} href={"/privacy-policy"}> */}
+                  Privacy Policy
+                  {/* </Link> */}
                 </nobr>
               </div>
               <div className={`col`}>
                 <nobr>
-                  <Link className={footerStyle.link} href={"/disclaimer"}>
-                    Legal Disclaimer
-                  </Link>
+                  {/* <Link className={footerStyle.link} href={"/disclaimer"}> */}
+                  Legal Disclaimer
+                  {/* </Link> */}
                 </nobr>
               </div>
               <div className={`col`}>
                 <nobr>
-                  <Link
+                  {/* <Link
                     className={footerStyle.link}
                     href={"/terms-and-conditions"}
-                  >
-                    Terms & Conditions
-                  </Link>
+                  > */}
+                  Terms & Conditions
+                  {/* </Link> */}
                 </nobr>
               </div>
             </div>

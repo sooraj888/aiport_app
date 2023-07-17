@@ -25,21 +25,26 @@ import IMAGE15 from "../../../public/assets/IMG_20230717_120945_728.jpg";
 export default function page() {
   const imageData = [
     IMAGE1,
+    IMAGE14,
+    IMAGE8,
+    IMAGE7,
+
     IMAGE,
+    IMAGE6,
+
+    IMAGE4,
+
+    IMAGE5,
     IMAGE2,
     IMAGE3,
-    IMAGE4,
-    IMAGE5,
-    IMAGE6,
-    IMAGE7,
-    IMAGE8,
-    IMAGE9,
+    // IMAGE9,
     IMAGE10,
     IMAGE11,
+
+    IMAGE15,
     IMAGE12,
-    IMAGE15,
-    IMAGE14,
-    IMAGE15,
+
+    // IMAGE15,
   ];
   return (
     <div className={`${styles.pageWithPadding}`}>

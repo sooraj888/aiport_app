@@ -118,13 +118,10 @@ export default function OwnerCard() {
               alignItems: "center",
             }}
           >
-            <Link className={footerStyle.linkGray} href={"/corporate/about-us"}>
+            <Link className={footerStyle.linkGray} href={"/"}>
               About Us
             </Link>
-            <Link
-              className={footerStyle.linkGray}
-              href={"/corporate/contact-us"}
-            >
+            <Link className={footerStyle.linkGray} href={"/"}>
               Contact Us
             </Link>
           </div>

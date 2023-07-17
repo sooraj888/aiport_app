@@ -1,0 +1,31 @@
+@import "../../styles/mixsins";
+
+.screen {
+  margin: 5ch 6ch;
+  //   background: red;
+  //   height: 400px;
+  overflow: hidden;
+}
+.bottomButton {
+  bottom: 50px;
+}
+.carouselCard {
+  height: 450px;
+  margin: 0px 10%;
+  background: gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: "1px solid rgba(0,0,0,0.3)";
+}
+
+@include mobile_scren() {
+  .screen {
+    margin: 5ch 10px;
+  }
+  .bottomButton {
+    bottom: 5px;
+  }
+  .carouselCard {
+    margin: 0px 10px;
+  }
+}
