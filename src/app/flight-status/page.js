@@ -1,12 +1,10 @@
-"use client";
 import "@/styles/global.module.scss";
 import ContainerPage from "@/components/ContainerPage";
 import { headerMainRef } from "@/components/sideBar/SideMenu";
 
 import styles from "@/styles/global.module.scss";
-import { useState } from "react";
+
 export default function page() {
-  const [value, setValue] = useState();
   return (
     <div className={`${styles.pageWithPadding}`}>
       <ContainerPage>
